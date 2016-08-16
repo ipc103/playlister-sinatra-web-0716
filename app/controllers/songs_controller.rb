@@ -10,6 +10,7 @@ class SongsController < ApplicationController
     erb :'songs/show'
   end
 
+  # CHALLENGE: This controller action adds the song's genres twice. Why???
   post '/songs' do
     # {song: {name: 'Kenny G Christmas', genre_ids: [1, 2, 3]}}
     @song = Song.new(params[:song])
